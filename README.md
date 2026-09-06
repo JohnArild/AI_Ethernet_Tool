@@ -50,3 +50,4 @@ eit status
 - [Plan (viability, architecture, tests, concerns)](docs/EIT-plan.md)
 - [Hardware choices](docs/hardware.md)
 - [Operator cheat sheet](docs/operator.md)
+- [How AI was used (model, harness, prompts)](AI.md)
