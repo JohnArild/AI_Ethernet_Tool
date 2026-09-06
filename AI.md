@@ -54,6 +54,32 @@ That comment is why the software is board-agnostic, why a Linux HTTP/CLI control
 - systemd, networkd, udev, bring-up scripts (`os/`)
 - Unit tests (`tests/`); live netns tests skip unless run as root
 
+## Session token usage
+
+Figures come from Grok Build’s session log (`turn_completed` usage records) for session `01a06ff9-0916-74f1-95fd-d1b83c5f24e4`. They cover **four finished prompts** and **38 model calls** on `grok-4.6`. They **do not** include the prompt that added this section and pushed it.
+
+Input totals include prompt-cache reads. Uncached input is input minus cache reads. There was no compaction.
+
+| | Tokens |
+| --- | ---: |
+| **Total** | **4,713,890** |
+| Input | 4,653,814 |
+| of which cache reads | 4,000,896 |
+| uncached input | 652,918 |
+| Output | 60,076 |
+| of which reasoning | 47,912 |
+
+Per finished prompt:
+
+| Prompt | Input | Cache reads | Output | Reasoning | Model calls | Total |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Plan and implementation | 2,694,597 | 2,199,424 | 54,431 | 43,609 | 25 | 2,749,028 |
+| Write `AI.md` | 723,526 | 588,416 | 2,421 | 2,172 | 5 | 725,947 |
+| Commit and push `AI.md` | 442,216 | 440,960 | 383 | 247 | 3 | 442,599 |
+| “How many tokens did this session use?” | 793,475 | 772,096 | 2,841 | 1,884 | 5 | 796,316 |
+
+When those four prompts had finished, the live context window was about **169k / 500k** (33%). That is how much was in memory, not how much the session used in total.
+
 ## What still needs a human
 
 - Reviewing and owning the code before you trust it on a bench
