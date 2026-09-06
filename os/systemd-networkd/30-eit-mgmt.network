@@ -1,0 +1,8 @@
+[Match]
+Name=eit-mgmt
+
+[Network]
+Address=192.168.50.1/24
+DHCP=no
+IPv6AcceptRA=no
+LinkLocalAddressing=yes

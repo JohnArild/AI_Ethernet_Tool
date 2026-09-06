@@ -1,0 +1,8 @@
+{
+  "delay_ms": 200,
+  "jitter_ms": 50,
+  "loss_pct": 2,
+  "rate": "2mbit",
+  "direction": "both",
+  "duration_s": 60
+}

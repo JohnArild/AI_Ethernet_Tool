@@ -1,0 +1,15 @@
+{
+  "interfaces": {
+    "lan": "eit-lan",
+    "wan": "eit-wan",
+    "bridge": "br-eit"
+  },
+  "listen": {
+    "host": "0.0.0.0",
+    "port": 8080
+  },
+  "default_duration_s": 60,
+  "max_duration_s": 3600,
+  "profile_dir": "/etc/eit/profiles",
+  "assumed_link_bps": 1000000000
+}

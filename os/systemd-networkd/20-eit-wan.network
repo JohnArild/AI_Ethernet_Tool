@@ -1,0 +1,11 @@
+[Match]
+Name=eit-wan
+
+[Network]
+Bridge=br-eit
+LinkLocalAddressing=no
+IPv6AcceptRA=no
+ConfigureWithoutCarrier=yes
+
+[Link]
+RequiredForOnline=no

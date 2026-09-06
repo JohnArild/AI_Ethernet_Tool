@@ -1,0 +1,8 @@
+[NetDev]
+Name=br-eit
+Kind=bridge
+
+[Bridge]
+STP=false
+DefaultPVID=none
+VLANFiltering=false

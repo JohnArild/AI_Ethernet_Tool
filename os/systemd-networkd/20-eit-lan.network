@@ -1,0 +1,12 @@
+[Match]
+Name=eit-lan
+
+[Network]
+Bridge=br-eit
+LinkLocalAddressing=no
+IPv6AcceptRA=no
+ConfigureWithoutCarrier=yes
+
+[Link]
+# Offloads are also disabled by `eit prepare`; this is belt and suspenders.
+RequiredForOnline=no

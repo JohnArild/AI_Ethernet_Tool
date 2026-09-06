@@ -1,0 +1,5 @@
+{
+  "rate": "10mbit",
+  "direction": "both",
+  "duration_s": 60
+}

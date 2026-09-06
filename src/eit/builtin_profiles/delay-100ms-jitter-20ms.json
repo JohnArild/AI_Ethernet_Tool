@@ -1,0 +1,6 @@
+{
+  "delay_ms": 100,
+  "jitter_ms": 20,
+  "direction": "both",
+  "duration_s": 60
+}

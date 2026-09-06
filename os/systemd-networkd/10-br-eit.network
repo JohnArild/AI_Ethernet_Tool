@@ -1,0 +1,8 @@
+[Match]
+Name=br-eit
+
+[Network]
+# No IP on the data path. Management is a third interface or localhost.
+LinkLocalAddressing=no
+IPv6AcceptRA=no
+ConfigureWithoutCarrier=yes

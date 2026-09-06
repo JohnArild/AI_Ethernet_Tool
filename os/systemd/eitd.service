@@ -1,0 +1,17 @@
+[Unit]
+Description=Error Injection Tool daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -m eit.daemon --config /etc/eit/config.json
+ExecStop=/usr/bin/python3 -m eit.cli --direct --config /etc/eit/config.json clear
+ExecStopPost=/usr/bin/python3 -m eit.cli --direct --config /etc/eit/config.json clear
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=10
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

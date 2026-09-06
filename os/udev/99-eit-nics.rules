@@ -1,0 +1,14 @@
+# Rename data and management NICs to stable names used by EIT config.
+# Fill in ATTR{address} (or KERNEL/ID_NET_DRIVER) after first boot.
+#
+# Example after `ip link` / `ethtool`:
+#   ATTR{address}=="aa:bb:cc:dd:ee:01", NAME="eit-lan"
+#   ATTR{address}=="aa:bb:cc:dd:ee:02", NAME="eit-wan"
+#   ATTR{address}=="aa:bb:cc:dd:ee:03", NAME="eit-mgmt"
+#
+# Leave these commented until MAC addresses are known. Wrong udev names
+# will hide the interfaces.
+
+# SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="00:00:00:00:00:01", NAME="eit-lan"
+# SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="00:00:00:00:00:02", NAME="eit-wan"
+# SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="00:00:00:00:00:03", NAME="eit-mgmt"

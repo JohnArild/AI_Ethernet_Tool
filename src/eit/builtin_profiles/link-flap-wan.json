@@ -1,0 +1,5 @@
+{
+  "link_down": "wan",
+  "flap_ms": 1000,
+  "duration_s": 15
+}
